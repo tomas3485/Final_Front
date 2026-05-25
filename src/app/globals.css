@@ -44,6 +44,7 @@ a {
   margin-top: 30px; 
   justify-content: space-around;
   margin-bottom: 40px;
+  
 }
 .personajes img{
   width: 300px;
@@ -71,4 +72,8 @@ a {
   backdrop-filter: blur(10px);
   outline: none;
   width: 250px;
+}
+.buscador {
+    display: flex;
+    justify-content: center;
 }

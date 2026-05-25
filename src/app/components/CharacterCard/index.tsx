@@ -1,5 +1,6 @@
 import type { CharacterT } from "@/app/type/CharacterT";
 import Link from "next/link";
+import "@/app/components/CharacterCard/style.css"
 
 const CharacterCard = ({ character }: { character: CharacterT }) => {
     return (

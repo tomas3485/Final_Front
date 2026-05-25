@@ -1,0 +1,21 @@
+.CharacterCard {
+    display: flex;
+    flex-direction: row;
+    background-color: #3c3e44;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    color: white;
+}
+
+.CharacterCard img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.CharacterCard p {
+    padding: 10px 20px;
+    margin: 5px 0;
+    align-self: center;
+}
