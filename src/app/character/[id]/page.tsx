@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { CharacterT } from "@/app/type/CharacterT";
 import { getCharacterById } from "@/api/character";
-
+import "@/app/character/[id]/style.css"
 const CharacterPage = () => {
   const { id } = useParams<{ id: string }>();
 
@@ -33,16 +33,19 @@ const CharacterPage = () => {
       
 
       <img src={character.image} alt={character.name} />
-      <p>ID: {character.id}</p>
-      <p>Nombre: {character.name}</p>
-      <p>Estado: {character.status}</p>
-      <p>Especie: {character.species}</p>
-      <p>Género: {character.gender}</p>
-      <p>Origen: {character.origin.name}</p>
-      <p>Ubicación: {character.location.name}</p>
+      <div className="klk">
+        <div className="info">
+          <p>ID: {character.id}</p>
+          <p>Nombre: {character.name}</p>
+          <p>Estado: {character.status}</p>
+          <p>Especie: {character.species}</p>
+          <p>Género: {character.gender}</p>
+          <p>Origen: {character.origin.name}</p>
+          <p>Ubicación: {character.location.name}</p>
+        </div>
 
-      <p>'</p>
       <Link href="/">Volver </Link>
+      </div>
     </div>
   );
 };

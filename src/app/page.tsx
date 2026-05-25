@@ -26,13 +26,13 @@ const Home = () => {
     mostrarPersonajes();
   }, [page, name]);
 
-  const applyNameFilter = () => {
+  const FiltroNombre = () => {
     setName(nameInput);
     setPage(1);
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") applyNameFilter();
+    if (e.key === "Enter") FiltroNombre();
   };
 
   if (loading) return <p>Loading...</p>;
@@ -40,6 +40,7 @@ const Home = () => {
     <div className="mainCharacters">
       <div className="buscador">
         <input
+        className="input"
           type="text"
           placeholder="Buscar por nombre..."
           value={nameInput}
@@ -56,12 +57,7 @@ const Home = () => {
         }
       </div>
 
-      <Paginacion
-        next={!!personajes?.info.next}
-        prev={!!personajes?.info.prev}
-        page={page}
-        setPage={(e) => setPage(e)}
-      />
+      <Paginacion next={!!personajes?.info.next} prev={!!personajes?.info.prev} page={page} setPage={(e) => setPage(e)} totalPages={personajes?.info.pages ?? 1}/>
     </div>
   );
 };
