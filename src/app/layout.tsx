@@ -23,8 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <div className="linksytal">
+          <h1>Buscador de Rick y Morty</h1>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

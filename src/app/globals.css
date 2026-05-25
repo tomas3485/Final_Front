@@ -47,3 +47,28 @@ a {
     color-scheme: dark;
   }
 }
+
+.personajes{
+  display: column;
+  gap: 40px;
+  margin-top: 30px; 
+  justify-content: space-around;
+  margin-bottom: 20px;
+  
+}
+.personajes img{
+  width: 300px;
+  height: 300px;
+}
+
+.linksytal{
+  width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: grey;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 35px;
+}
